@@ -8,13 +8,13 @@ class Character
       def all
         @mental + @physical + @social
       end
-      def mental(name, cost, options)
+      def mental(name, cost, options={})
         @mental.push([name, cost, options])
       end
-      def physical(name, cost, options)
+      def physical(name, cost, options={})
         @physical.push([name, cost, options])
       end
-      def social(name, cost, options)
+      def social(name, cost, options={})
         @social.push([name, cost, options])
       end
 
