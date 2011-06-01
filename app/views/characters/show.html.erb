@@ -1,0 +1,13 @@
+<h1><%= @character.name%></h1>
+<%= link_to "edit", edit_character_url(@character) %>
+<div class="section">
+  <% Character::Constants::ATTRS.each do |attr| %>
+      <span><%= attr %></span>: <span><%= @character.send(attr.downcase.to_sym) %></span><br/>
+  <% end %>
+</div>
+<div class="section">
+  <% Character::Constants::SKILLS.each do |skill| %>
+    <span><%= skill %></span>: <span><%= @character.send(skill.downcase.to_sym) %></span><br/>
+  <% end %>
+</div>
+

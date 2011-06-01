@@ -1,0 +1,44 @@
+<%= form_for(@character) do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="section">
+    <% Character::Constants::ATTRS.each do |attr| attr = attr.downcase.to_sym %>
+      <div class="field">
+        <%= f.label attr %><br />
+        <% (0..5).each do |i| %>
+          <%= f.radio_button attr.downcase, i %> <%= i %>
+        <% end %>
+
+      </div>
+    <% end %>
+  </div>
+  <div class="section">
+    <% Character::Constants::SKILLS.each do |skill| skill = skill.downcase.to_sym %>
+      <div class="field">
+        <%= f.label skill %><br />
+        <% (0..5).each do |i| %>
+          <%= f.radio_button skill.downcase, i %> <%= i %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
