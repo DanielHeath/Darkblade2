@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
   def show
-    @character = Character.find_or_create_by_name(params[:id])
+    redirect_to edit_character_url params[:id]
   end
   def edit
     @character = Character.find_or_create_by_name(params[:id])
