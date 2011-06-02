@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110601122743) do
+ActiveRecord::Schema.define(:version => 20110602140803) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(:version => 20110601122743) do
     t.integer  "subterfuge",    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "prime",         :default => 0
+    t.integer  "fate",          :default => 0
+    t.integer  "mind",          :default => 0
+    t.integer  "spirit",        :default => 0
+    t.integer  "death",         :default => 0
+    t.integer  "forces",        :default => 0
+    t.integer  "time",          :default => 0
+    t.integer  "space",         :default => 0
+    t.integer  "life",          :default => 0
+    t.integer  "matter",        :default => 0
   end
 
 end

@@ -53,5 +53,18 @@ class Character
     MERIT_STARTING_POINT_COST   = [0, 1, 2, 03, 04, 06]
     MERIT_XP_COSTS              = [0, 2, 6, 12, 20, 30]
 
+
+    ARCANUM = {
+      "Prime" => "Subtle magic which changes (or stops) other spells and restores mana",
+      "Fate" => "Subtle magic which reads (or changes) destiny and luck",
+      "Mind" => "Subtle magic that pries at the minds of others",
+      "Spirit" => "Subtle magic that lets you bargain with spirits (who can do pretty much anything)",
+      "Death" => "Subtle magic of darkness, decay, souls, death and undeath",
+      "Forces" => "Obvious magic that controls heat, light, electricity, radiation, gravity and kinetic energy",
+      "Time" => "Obvious magic that alters time itself",
+      "Space" => "Obvious magic that grants powers like teleportation and scrying. Space 2 can be combined with other arcanum to effect distant targets",
+      "Life" => "Obvious magic; healing, transforming, strengthening or weakening",
+      "Matter" => "Obvious magic which manipulates all forms of unliving matter",
+    }
   end
 end

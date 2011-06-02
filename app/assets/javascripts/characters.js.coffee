@@ -14,6 +14,9 @@ $ ->
     else if fieldset.is('.skills')
       score_adj = 0
       allowedScores = [3, 7, 11]
+    else if fieldset.is('.magic')
+      score_adj = 0
+      allowedScores = [1, 2, 3]
     else
       return true
 

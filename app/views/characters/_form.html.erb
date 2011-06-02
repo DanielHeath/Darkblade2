@@ -30,6 +30,10 @@
   </div>
 
   <div class="section">
+    <div class="field">
+      Skills<br/>
+      Starting characters have 11 points to spend in one column, 7 on another and 3 on the third.
+    </div>
     <% Character::Constants::SKILLS_BY_TYPE.each do |skills|  %>
       <div class="fieldset skills">
         <% skills.each do |skill| %>
@@ -40,6 +44,22 @@
         </div>
       </div>
     <% end %>
+  </div>
+
+  <div class="section">
+    <div class="field">
+      <a href="http://whitewolf.wikia.com/wiki/Arcanum_(MTAw)">Magic</a><br/>
+      Starting characters have 3 dots in one arcanum, 2 in another and 1 in a third.
+    </div>
+
+    <% Character::Constants::ARCANUM.each_slice(5) do |arcanum|  %>
+      <div class="fieldset magic">
+        <% arcanum.each do |arcana, description| %>
+          <%= render :partial => "fivedot", :locals => {:field => arcana.downcase.to_sym, :description => description, :f => f} %>
+        <% end %>
+      </div>
+    <% end %>
+
   </div>
   <div class="actions">
     <%= f.submit 'Save' %>
