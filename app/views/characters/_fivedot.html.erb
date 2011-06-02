@@ -1,0 +1,12 @@
+
+<div class="field <%= field %>" data-value="<%= f.object.send(field) %>">
+  <%= f.label "#{field} (<span class='value'>#{f.object.send(field)}</span>)".html_safe, :class => field  %>
+  <div class="values">
+    <% (0..5).each do |v| %>
+      <%= f.radio_button field, v, :title => v, 'data-for' => field %>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</div>
+
+

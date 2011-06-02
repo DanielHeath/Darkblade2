@@ -11,34 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
+  <div class="clear"></div>
   <div class="section">
-    <% Character::Constants::ATTRS.each do |attr| attr = attr.downcase.to_sym %>
-      <div class="field">
-        <%= f.label attr %><br />
-        <% (0..5).each do |i| %>
-          <%= f.radio_button attr.downcase, i %> <%= i %>
-        <% end %>
-
-      </div>
-    <% end %>
-  </div>
-  <div class="section">
-    <% Character::Constants::SKILLS.each do |skill| skill = skill.downcase.to_sym %>
-      <div class="field">
-        <%= f.label skill %><br />
-        <% (0..5).each do |i| %>
-          <%= f.radio_button skill.downcase, i %> <%= i %>
+    <% Character::Constants::ATTRS.each_slice(3) do |attrs|  %>
+      <div class="fieldset">
+        <% attrs.each do |attr| %>
+          <%= render :partial => "fivedot", :locals => {:field => attr.downcase.to_sym, :f => f} %>
         <% end %>
       </div>
     <% end %>
   </div>
 
+  <div class="section">
+    <% Character::Constants::SKILLS_BY_TYPE.each do |skills|  %>
+      <div class="fieldset">
+        <% skills.each do |skill| %>
+          <%= render :partial => "fivedot", :locals => {:field => skill.downcase.to_sym, :f => f} %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save' %>
   </div>
 <% end %>

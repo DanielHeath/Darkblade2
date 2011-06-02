@@ -1,12 +1,44 @@
+body
+  padding: 0
+  margin: 0  
+  text-align: center
+  margin: 0 auto
 
-div.section
-  width: 100%
-  float: left
-  outline: 4px black solid
-  div.field
-    outline: 1px black solid
-  margin-bottom: 20px
+div.actions
+  margin: 0px auto
+  clear: both
 
 div.field
-  float: left
-  width: 33%
+  margin: 0px auto
+
+  input
+    text-align: center
+
+div.section
+  margin: 0px auto
+  width: 690px
+
+  div.fieldset
+    float: left
+    height: 100%
+    width: 33%
+    margin-bottom: 20px
+
+    &:last-child
+      width: 34%
+
+    div.field
+      float: auto
+      width: 96%
+      padding-right: 2%
+      padding-left: 2%
+      border: 1px lightgrey solid
+      border-left: 1px grey solid
+      label
+        float: left
+      .values
+        float: right
+        input[type="radio"]
+          margin-right: 0px
+          margin-left: 0px
+
