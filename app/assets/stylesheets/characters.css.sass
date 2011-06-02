@@ -15,6 +15,16 @@ div.field
     text-align: center
 
 div.section
+  .points.invalid
+    background-color: #FF9944
+
+  &.valid
+    .attributes
+      .points[data-value="3"], .points[data-value="4"], .points[data-value="5"]
+        background-color: lightgreen
+    .skills
+      .points[data-value="3"], .points[data-value="7"], .points[data-value="11"]
+        background-color: lightgreen
   margin: 0px auto
   width: 690px
 
@@ -26,7 +36,8 @@ div.section
 
     &:last-child
       width: 34%
-
+      div.field
+        border-right: 1px grey solid
     div.field
       float: auto
       width: 96%
@@ -34,6 +45,9 @@ div.section
       padding-left: 2%
       border: 1px lightgrey solid
       border-left: 1px grey solid
+
+      
+        
       label
         float: left
       .values

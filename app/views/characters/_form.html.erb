@@ -13,21 +13,31 @@
 
   <div class="clear"></div>
   <div class="section">
+    <div class="field">
+      Attributes<br/>
+      Starting characters have 5 points to spend in one column, 4 on another and 3 on the third.
+    </div>
     <% Character::Constants::ATTRS.each_slice(3) do |attrs|  %>
-      <div class="fieldset">
+      <div class="fieldset attributes">
         <% attrs.each do |attr| %>
           <%= render :partial => "fivedot", :locals => {:field => attr.downcase.to_sym, :f => f} %>
         <% end %>
+        <div class="field points">
+          Spent <span class="value">0</span> points
+        </div>
       </div>
     <% end %>
   </div>
 
   <div class="section">
     <% Character::Constants::SKILLS_BY_TYPE.each do |skills|  %>
-      <div class="fieldset">
+      <div class="fieldset skills">
         <% skills.each do |skill| %>
           <%= render :partial => "fivedot", :locals => {:field => skill.downcase.to_sym, :f => f} %>
         <% end %>
+        <div class="field points">
+          Spent <span class="value">0</span> points
+        </div>
       </div>
     <% end %>
   </div>

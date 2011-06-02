@@ -14,7 +14,7 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.update_attributes(params[:character])
-        format.html { redirect_to @character, notice: 'Character was successfully updated.' }
+        format.html { redirect_to edit_character_url(@character), notice: 'Character was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
