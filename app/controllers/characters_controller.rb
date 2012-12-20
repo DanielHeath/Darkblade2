@@ -1,5 +1,9 @@
 class CharactersController < ApplicationController
 
+  def index
+    @characters = Character.all
+  end
+
   def show
     redirect_to edit_character_url params[:id]
   end

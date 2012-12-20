@@ -1,6 +1,6 @@
 <% description ||= field %>
 <div class="field <%= field %>" data-value="<%= f.object.send(field) %>">
-  <%= f.label "#{field} (<span class='value'>#{f.object.send(field)}</span>)".html_safe, :class => field, :title => description  %>
+  <%= f.label field, "#{field} (<span class='value'>#{f.object.send(field)}</span>)".html_safe, :class => field, :title => description  %>
   <div class="values">
     <% (0..5).each do |v| %>
       <%= f.radio_button field, v, :title => v, 'data-for' => field %>
@@ -9,4 +9,4 @@
   <div class="clear"></div>
 </div>
 
-
+<label class="composure" for="character_composure (&lt;span class='value'&gt;1&lt;/span&gt;)" title="composure">Composure (<span class="value">1</span>)</label>

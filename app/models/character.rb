@@ -7,4 +7,7 @@ class Character < ActiveRecord::Base
     name
   end
 
+  def to_s
+    name
+  end
 end

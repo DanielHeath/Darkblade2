@@ -1,6 +1,7 @@
 Darkblade3::Application.routes.draw do
-  resources :characters, :only => [:show, :edit, :update]
+  resources :characters, :only => [:show, :edit, :update, :index]
 
+  root :to => 'characters#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,4 +58,5 @@ Darkblade3::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  match ':id', :to => 'characters#show'
 end
