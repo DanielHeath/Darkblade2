@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "1.9.3"
 
 gem 'rails'
 gem 'rake'
@@ -11,8 +12,8 @@ gem 'pg'
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-
 gem 'jquery-rails'
+gem 'thin'
 
 group :development do
   gem 'sqlite3'
