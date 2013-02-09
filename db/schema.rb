@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110602140803) do
+ActiveRecord::Schema.define(:version => 20110601122743) do
 
-  create_table "characters", :force => true do |t|
-    t.string   "name"
+  create_table "characters", :id => false, :force => true do |t|
+    t.string   "id",                           :null => false
     t.integer  "intelligence",  :default => 1
     t.integer  "wits",          :default => 1
     t.integer  "resolve",       :default => 1
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20110602140803) do
     t.integer  "stealth",       :default => 0
     t.integer  "survival",      :default => 0
     t.integer  "weaponry",      :default => 0
-    t.integer  "animal ken",    :default => 0
+    t.integer  "animal_ken",    :default => 0
     t.integer  "empathy",       :default => 0
     t.integer  "expression",    :default => 0
     t.integer  "intimidation",  :default => 0
@@ -48,8 +48,6 @@ ActiveRecord::Schema.define(:version => 20110602140803) do
     t.integer  "socialize",     :default => 0
     t.integer  "streetwise",    :default => 0
     t.integer  "subterfuge",    :default => 0
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
     t.integer  "prime",         :default => 0
     t.integer  "fate",          :default => 0
     t.integer  "mind",          :default => 0
@@ -60,6 +58,8 @@ ActiveRecord::Schema.define(:version => 20110602140803) do
     t.integer  "space",         :default => 0
     t.integer  "life",          :default => 0
     t.integer  "matter",        :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
 end

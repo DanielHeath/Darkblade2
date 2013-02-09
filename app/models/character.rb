@@ -1,13 +1,14 @@
 class Character < ActiveRecord::Base
   include Character::Constants
-  validates_uniqueness_of :name
-  validates_presence_of :name
+  accessible = %w{id intelligence wits resolve strength dexterity stamina presence manipulation composure academics computer crafts investigation medicine occult politics science athletics brawl drive firearms larceny stealth survival weaponry animal_ken empathy expression intimidation persuasion socialize streetwise subterfuge prime fate mind spirit death forces time space life matter}
+  accessible.each {|a| attr_accessible a.to_sym }
+
 
   def to_param
-    name
+    id
   end
 
   def to_s
-    name
+    id
   end
 end

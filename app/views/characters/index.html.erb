@@ -1,5 +1,8 @@
 <h1>Characters</h1>
 <ul>
+<li>
+  <%= link_to("New Character", new_character_url) %>
+</li>
 <% @characters.each do |c| %>
 <li>
   <%= link_to(c, c) %>

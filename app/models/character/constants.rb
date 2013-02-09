@@ -1,31 +1,31 @@
 class Character
   module Constants
-    MENTAL_SKILLS =   [ "Academics", 
-	                "Computer", 
-	                "Crafts", 
-	                "Investigation", 
-	                "Medicine", 
-	                "Occult", 
-	                "Politics", 
+    MENTAL_SKILLS =   [ "Academics",
+	                "Computer",
+	                "Crafts",
+	                "Investigation",
+	                "Medicine",
+	                "Occult",
+	                "Politics",
 	                "Science"]
-    PHYSICAL_SKILLS = [ "Athletics", 
-	                "Brawl", 
+    PHYSICAL_SKILLS = [ "Athletics",
+	                "Brawl",
 	                "Drive",
 	                "Firearms",
 	                "Larceny",
 	                "Stealth",
 	                "Survival",
 	                "Weaponry"]
-    SOCIAL_SKILLS =   [ "Animal Ken", 
-	                "Empathy", 
+    SOCIAL_SKILLS =   [ "Animal_Ken",
+	                "Empathy",
 	                "Expression",
 	                "Intimidation",
 	                "Persuasion",
 	                "Socialize",
 	                "Streetwise",
 	                "Subterfuge"]
-    SKILLS_BY_TYPE = [MENTAL_SKILLS, 
-	              PHYSICAL_SKILLS, 
+    SKILLS_BY_TYPE = [MENTAL_SKILLS,
+	              PHYSICAL_SKILLS,
 	              SOCIAL_SKILLS]
     SKILLS = SKILLS_BY_TYPE.flatten
 
@@ -33,8 +33,8 @@ class Character
     PHYSICAL_ATTRS            = ["Strength", "Dexterity", "Stamina"]
     SOCIAL_ATTRS              = ["Presence", "Manipulation", "Composure"]
 
-    ATTRS_BY_TYPE = [ MENTAL_ATTRS, 
-                      PHYSICAL_ATTRS, 
+    ATTRS_BY_TYPE = [ MENTAL_ATTRS,
+                      PHYSICAL_ATTRS,
                       SOCIAL_ATTRS]
 
     ATTRS = ATTRS_BY_TYPE.flatten
