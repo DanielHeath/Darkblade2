@@ -1,0 +1,216 @@
+Section
+	Row
+		String "Shadow Name"
+		End
+		String "Virtue"
+			Suggestion "Prudence"
+			End
+			Suggestion "Temperance"
+			End
+			Suggestion "Justice"
+			End
+			Suggestion "Charity"
+			End
+			Suggestion "Hope"
+			End
+			Suggestion "Faith"
+			End
+			Suggestion "Fortitude"
+			End
+		End
+		String "Path"
+			Suggestion "Acanthus (Fate, Time)"
+			End
+			Suggestion "Mastigos (Mind, Space)"
+			End
+			Suggestion "Moros (Death, Matter)"
+			End
+			Suggestion "Obrimos (Prime, Forces)"
+			End
+			Suggestion "Thyrsus (Spirit, Life)"
+			End
+		End
+	End
+	Row
+		String "Player"
+			Description "Your name"
+			End
+		End
+		String "Vice"
+			Suggestion "Lust"
+			End
+			Suggestion "Gluttony"
+			End
+			Suggestion "Greed"
+			End
+			Suggestion "Sloth"
+			End
+			Suggestion "Wrath"
+			End
+			Suggestion "Envy"
+			End
+			Suggestion "Pride"
+			End
+		End
+		String "Order"
+			Description "The group of mages you belong to"
+			End
+		End
+	End
+	Row
+		String "Chronicle"
+			Description "Name of the campaign"
+			End
+		End
+		String "Concept"
+			Description "A really short description of your character"
+			End
+		End
+		String "Legacy"
+			Description "Subgroup within an Order"
+			End
+		End
+	End
+End
+Section "Attributes"
+	Row "Power"
+		FiveDots "Intelligence"
+			Default 1
+			End
+		End
+		FiveDots "Strength"
+			Default 1
+			End
+		End
+		FiveDots "Presence"
+			Default 1
+			End
+		End
+	End
+	Row "Finesse"
+		FiveDots "Wits"
+			Default 1
+			End
+		End
+		FiveDots "Dexterity"
+			Default 1
+			End
+		End
+		FiveDots "Manipulation"
+			Default 1
+			End
+		End
+	End
+	Row "Resistance"
+		FiveDots "Resolve"
+			Default 1
+			End
+		End
+		FiveDots "Stamina"
+			Default 1
+			End
+		End
+		FiveDots "Composure"
+			Default 1
+			End
+		End
+	End
+End
+Section "Skills"
+	Section "Mental"
+		FiveDots "Academics"
+		End
+		FiveDots "Computer"
+		End
+		FiveDots "Crafts"
+		End
+		FiveDots "Investigation"
+		End
+		FiveDots "Medicine"
+		End
+		FiveDots "Occult"
+		End
+		FiveDots "Politics"
+		End
+		FiveDots "Science"
+		End
+	End
+	Section "Physical"
+		FiveDots "Athletics"
+		End
+		FiveDots "Brawl"
+		End
+		FiveDots "Drive"
+		End
+		FiveDots "Firearms"
+		End
+		FiveDots "Larceny"
+		End
+		FiveDots "Stealth"
+		End
+		FiveDots "Survival"
+		End
+		FiveDots "Weaponry"
+		End
+	End
+	Section "Social"
+		FiveDots "Animal Ken"
+		End
+		FiveDots "Empathy"
+		End
+		FiveDots "Expression"
+		End
+		FiveDots "Intimidation"
+		End
+		FiveDots "Persuasion"
+		End
+		FiveDots "Socialize"
+		End
+		FiveDots "Streetwise"
+		End
+		FiveDots "Subterfuge"
+		End
+	End
+End
+Section "Arcana"
+	FiveDots "Prime"
+		Description "Subtle magic which changes (or stops) other spells and restores mana"
+		End
+	End
+	FiveDots "Fate"
+		Description "Subtle magic which reads (or changes) destiny and luck"
+		End
+	End
+	FiveDots "Mind"
+		Description "Subtle magic that pries at the minds of others"
+		End
+	End
+	FiveDots "Spirit"
+		Description "Subtle magic that lets you bargain with spirits (who can do pretty much anything)"
+		End
+	End
+	FiveDots "Death"
+		Description "Subtle magic of darkness decay souls death and undeath"
+		End
+	End
+	FiveDots "Forces"
+		Description "Obvious magic that controls heat light electricity radiation gravity and kinetic energy"
+		End
+	End
+	FiveDots "Time"
+		Description "Obvious magic that alters time itself"
+		End
+	End
+	FiveDots "Space"
+		Description "Obvious magic that grants powers like teleportation and scrying. Space 2 can be combined with other arcanum to effect distant targets"
+		End
+	End
+	FiveDots "Life"
+		Description "Obvious magic; healing transforming strengthening or weakening"
+		End
+	End
+	FiveDots "Matter"
+		Description "Obvious magic which manipulates all forms of unliving matter"
+		End
+	End
+End

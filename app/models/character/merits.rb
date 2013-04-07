@@ -3,7 +3,7 @@ class Character
     @mental = []
     @physical= []
     @social = []
-    
+
     class << self
       def all
         @mental + @physical + @social

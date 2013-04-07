@@ -1,0 +1,79 @@
+grammar SheetGrammar
+
+  rule sections
+    (section)+
+  end
+
+  rule section
+    indent sectionword (' ' section_name)? newline body endword
+  end
+
+  rule row
+    indent rowword (' ' row_name)? newline body endword
+  end
+
+  rule body
+    (section / row / stringfield / fivedots)*
+  end
+
+  rule stringfield
+    indent 'String ' string newline fieldbody endword
+  end
+
+  rule fivedots
+    indent 'FiveDots ' string newline fieldbody endword
+  end
+
+  rule fieldbody
+    (suggestion / description / defaultvalue)*
+  end
+
+  rule defaultvalue
+    indent 'Default ' integer newline endword
+  end
+
+  rule suggestion
+    indent 'Suggestion ' string newline endword
+  end
+
+  rule description
+    indent 'Description ' string newline endword
+  end
+
+  rule sectionword
+    'Section'
+  end
+
+  rule rowword
+    'Row'
+  end
+
+  rule endword
+    indent 'End' newline
+  end
+
+  rule section_name
+    string
+  end
+
+  rule row_name
+    string
+  end
+
+  rule string
+     '"' ([^"\\] / "\\" . )* '"' <StringLiteral>
+  end
+
+  rule integer
+    ('+' / '-')? [0-9]+ <IntegerLiteral>
+  end
+
+  rule newline
+    [\n]+
+  end
+
+  rule indent
+    [\t]*
+  end
+
+end
