@@ -17,7 +17,6 @@ class CharactersController < ApplicationController
   end
 
   def edit
-    SheetParser
     @character = Character.find_or_initialize_by_id(params[:id])
   end
 
