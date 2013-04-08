@@ -32,12 +32,12 @@ class SheetParsingThing
     # If the AST is nil then there was an error during parsing
     # we need to report a simple error message to help the user
     if(tree.nil?)
-      raise Exception, "Parse error at offset: #{@@parser.index} because #{@@parser.failure_reason}"
+      #raise Exception, "Parse error at offset: #{@@parser.index} because #{@@parser.failure_reason}"
     end
 
     return tree
   end
 end
 
-raise SheetParsingThing.parse(File.read(Rails.root.join("app", "models", "MageTheAwakening.tt").to_s)).inspect
+# raise SheetParsingThing.parse(File.read(Rails.root.join("app", "models", "MageTheAwakening.tt").to_s)).inspect
 
