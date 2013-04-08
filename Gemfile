@@ -14,3 +14,4 @@ gem 'jquery-rails'
 gem 'thin'
 
 gem 'treetop'
+gem 'eventmachine', ">= 1.0.3"
